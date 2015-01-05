@@ -29,17 +29,30 @@ Pro Version:
 * Optional integration in woocommerce and wp-ecommerce product page if product is in stock,takes product price as default amount and product currency as default from currency
 * Can give every widgets and shortcodes different look
 * Widgets can take its own setting or global settings
-* Shortcode can take these params
-            'use_global'           - Set  'on' if you want to use global settings,
-            'layout'               - Comma separate value of layout like calc,list / calc /list/ list,calc ,
-            'calc_title'           - Title for calculator,
-            'calc_to_currency'     - Default currency to which you want to convert,
-            'calc_from_currency'   - Default currency from which you want to convert,
-            'calc_default_amount'  - Default amount of from currency,
-            'list_title'           - Title for list,
-            'list_from_currency'   - Default currency from which you want to convert,
-            'list_to_currency'     - Default currencys (can select multiple ,comma seperate ) to which you want to convert,
-            'list_default_amount'  - Default amount of from currency for list view,
+* Shortcode Params
+
+use_global           - Set  'on' if you want to use global settings,
+
+layout               - Use any cbcurrencyconverter_defaultlayout (used as default),cbcurrencyconverter_list , cbcurrencyconverter_calwithlistbottom, cbcurrencyconverter_calwithlisttop
+
+calc_title           - Title for calculator,
+
+calc_to_currency     - Default currency to which you want to convert, example: USD
+
+calc_from_currency   - Default currency from which you want to convert,example: BDT
+
+for total currency list please check here https://gist.github.com/manchumahara/7e46191815961038dfb1
+
+calc_default_amount  - Default amount of from currency, example: 10
+
+list_title           - Title for list
+
+list_from_currency   - Default currency from which you want to convert,, example: USD
+
+list_to_currency     - Default currencys (can select multiple ,comma separate ) to which you want to convert, ,example: BDT
+
+list_default_amount  - Default amount of from currency for list view, example: 20
+
 
 
 == Installation ==
@@ -90,3 +103,5 @@ Yes and it will work in both place at a time nicely, just try it.
 = 1.0.10 =
 * First Public Release
 
+== Upgrade Notice ==
+* None at this moment
