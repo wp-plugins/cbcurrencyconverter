@@ -2,16 +2,16 @@
 /**
 
  * @package   cbcurrencyconverter
- * @author    codeboxr
+ * @author    wpboxr
  * @license   GPL-2.0+
- * @link      http://codeboxr.com
- * @copyright 2014-20115 codeboxr
- * Plugin Name:       Codeboxr Currency Converter
- * Plugin URI:        http://codeboxr.com/product/universal-currency-converter-and-live-exchange-rate-display-for-wordpress
- * Description:       Currency Converter widget and shortcode by codeboxr
- * Version:           1.0.10
- * Author:            codeboxr
- * Author URI:        http://codeboxr.com
+ * @link      http://wpboxr.com
+ * @copyright 2015 wpboxr
+ * Plugin Name:       CBX Currency Converter
+ * Plugin URI:        http://wpboxr.com/product/cbx-currency-converter-for-wordpress
+ * Description:       Currency Converter widget and rate display
+ * Version:           1.1.0
+ * Author:            wpboxr
+ * Author URI:        http://wpboxr.com
  * Text Domain:       cbcurrencyconverter
  * License:           GPL-2.0+
  */
@@ -523,7 +523,7 @@ class CbCurrencyConverter{
             array(
                 'name'  => 'cbcurrencyconverter_delete_options',
                 'label' => __( 'Remove Data on Uninstall?', 'cbcurrencyconverter' ),
-                'desc'  => __( 'Check this box if you would like <strong>Codeboxr Currency Converter</strong> to completely remove all of its data when the plugin is deleted.', 'cbcurrencyconverter' ),
+                'desc'  => __( 'Check this box if you would like <strong>CBX Currency Converter</strong> to completely remove all of its data when the plugin is deleted.', 'cbcurrencyconverter' ),
                 'type'  => 'checkbox'
 
             )
@@ -596,11 +596,21 @@ class CbCurrencyConverter{
         </style>
 
         <?php
+	    include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
         echo '<div class="wrap columns-2">';
 
         $output  = '';
+	    $pro_note = '';
         //$output = '<div class="icon32 icon32_cbrp_admin icon32-cbrp-edit" id="icon32-cbrp-edit"><br></div>';
-        $output .= '<h2>' . __( 'Codeboxr Currency Converter', 'cbcurrencyconverter' ) . '</h2>';
+	    if ( !is_plugin_active( 'wpfixedverticalfeedbackbuttonaddon/wpfixedverticalfeedbackbuttonaddon.php' ) ) {
+		    //plugin is not activated
+		    $pro_note = ' <a class="button" href="http://wpboxr.com/product/cbx-currency-converter-for-wordpress" target="_blank">'.__('Grab the Pro Version','wpfixedverticalfeedbackbutton').'</a>';
+	    }
+
+
+        $output .= '<h2>' . __( 'CBX Currency Converter', 'cbcurrencyconverter' ) .$pro_note. '</h2>';
+
 
         $output .= '<div class="cbcurrencyconverter_wrapper metabox-holder cbcurrencyconverter-metabox-holder has-right-sidebar" id="poststuff" style="padding-top: 0px !important;">';
 
@@ -626,66 +636,70 @@ class CbCurrencyConverter{
                 <h3>Plugin Info</h3>
 
                 <div class="inside">
-                    <p>Name : Codeboxr Currency Converter <?php echo 'v' . CODEBOXR_CURRENCYCONVERTER_PLUGIN_VERSION; ?></p>
-
-                    <p>Author : Codeboxr Team</p>
-
-                    <p>Plugin URL :
-                        <a href="http://codeboxr.com/product/cbcurrencyconverter" target="_blank">Codeboxr.com</a>
+                    <p>Name : CBX Currency Converter <?php echo 'v' . CODEBOXR_CURRENCYCONVERTER_PLUGIN_VERSION; ?></p>
+                    <p>Author :
+	                    <a href="http://wpboxr.com/product/cbx-currency-converter-for-wordpress" target="_blank">WPBoxr Team</a>
                     </p>
 
-                    <p>Email : <a href="mailto:info@codeboxr.com" target="_blank">info@codeboxr.com</a></p>
-
-                    <p>Contact : <a href="http://codeboxr.com/contact-us.html" target="_blank">Contact Us</a></p>
                 </div>
             </div>
             <div class="postbox">
                 <h3>Help & Supports</h3>
                 <div class="inside">
-                    <p>Support: <a href="http://codeboxr.com/contact-us.html" target="_blank">Contact Us</a></p>
-                    <p><i class="icon-envelope"></i> <a href="mailto:info@codeboxr.com">info@codeboxr.com</a></p>
+                    <p>Support: <a href="http://wpoxr.com/contact-us" target="_blank">Contact Us</a></p>
+                    <p><i class="icon-envelope"></i> <a href="mailto:info@wpboxr.com">info@wpboxr.com</a></p>
                     <p><i class="icon-phone"></i> <a href="tel:008801717308615">+8801717308615</a> (CEO: Sabuj Kundu)</p>
-                    <!--p><i class="icon-building"></i>  Address: Flat-11B1, 252 Elephant Road (Near Kataban Crossing), Dhaka 1205, Bangladesh.<br-->
                 </div>
             </div>
-            <div class="postbox">
-                <h3>Codeboxr Updates</h3>
-                <div class="inside">
-                    <?php
-                    include_once(ABSPATH . WPINC . '/feed.php');
-                    if(function_exists('fetch_feed')) {
-                        $feed = fetch_feed('http://codeboxr.com/feed');
-                        // $feed = fetch_feed('http://feeds.feedburner.com/codeboxr'); // this is the external website's RSS feed URL
-                        if (!is_wp_error($feed)) : $feed->init();
-                            $feed->set_output_encoding('UTF-8'); // this is the encoding parameter, and can be left unchanged in almost every case
-                            $feed->handle_content_type(); // this double-checks the encoding type
-                            $feed->set_cache_duration(21600); // 21,600 seconds is six hours
-                            $limit = $feed->get_item_quantity(6); // fetches the 18 most recent RSS feed stories
-                            $items = $feed->get_items(0, $limit); // this sets the limit and array for parsing the feed
+	        <div class="postbox">
+		        <h3><?php _e('WPBoxr Updates','wpfixedverticalfeedbackbutton'); ?></h3>
+		        <div class="inside">
+			        <?php
 
-                            $blocks = array_slice($items, 0, 6); // Items zero through six will be displayed here
-                            echo '<ul>';
-                            foreach ($blocks as $block) {
-                                $url = $block->get_permalink();
-                                echo '<li><a target="_blank" href="'.$url.'">';
-                                echo '<strong>'.$block->get_title().'</strong></a>';
-                                echo '</li>';
+			        include_once(ABSPATH . WPINC . '/feed.php');
+			        if (function_exists('fetch_feed')) {
+				        $feed = fetch_feed('http://wpboxr.com/feed');
+				        // $feed = fetch_feed('http://feeds.feedburner.com/codeboxr'); // this is the external website's RSS feed URL
+				        if (!is_wp_error($feed)) : $feed->init();
+					        $feed->set_output_encoding('UTF-8'); // this is the encoding parameter, and can be left unchanged in almost every case
+					        $feed->handle_content_type(); // this double-checks the encoding type
+					        $feed->set_cache_duration(21600); // 21,600 seconds is six hours
+					        $limit = $feed->get_item_quantity(6); // fetches the 18 most recent RSS feed stories
+					        $items = $feed->get_items(0, $limit); // this sets the limit and array for parsing the feed
 
-                            }//end foreach
-                            echo '</ul>';
-                        endif;
-                    }
-                    ?>
-                </div>
-            </div>
+					        $blocks = array_slice($items, 0, 6); // Items zero through six will be displayed here
+					        echo '<ul>';
+					        foreach ($blocks as $block) {
+						        $url = $block->get_permalink();
+						        echo '<li><a target="_blank" href="' . $url . '">';
+						        echo '<strong>' . $block->get_title() . '</strong></a></li>';
+					        }//end foreach
+					        echo '</ul>';
+				        endif;
+			        }
+			        ?>
+		        </div>
+	        </div>
+	        <div class="postbox">
+		        <div class="inside">
+			        <h3><?php _e('Codeboxr Networks','wpfixedverticalfeedbackbutton') ?></h3>
+			        <p><?php _e('Html, Wordpress & Joomla Themes','wpfixedverticalfeedbackbutton') ?></p>
+			        <a target="_blank" href="http://themeboxr.com"><img src="http://themeboxr.com/wp-content/themes/themeboxr/images/themeboxr-logo-rect.png" style="max-width: 100%;" alt="themeboxr" title="Themeboxr - useful themes"  /></a>
+			        <br/>
+			        <p><?php _e('Wordpress Plugins','wpfixedverticalfeedbackbutton') ?></p>
+			        <a target="_blank" href="http://wpboxr.com"><img src="http://wpboxr.com/wp-content/themes/themeboxr/images/wpboxr-logo-rect.png" style="max-width: 100%;" alt="wpboxr" title="WPBoxr - Wordpress Extracts"  /></a>
+			        <br/><br/>
+			        <p>Joomla Extensions</p>
+			        <a target="_blank" href="http://joomboxr.com"><img src="http://joomboxr.com/wp-content/themes/themeboxr/images/joomboxr-logo-rect.png" style="max-width: 100%;" alt="joomboxr" title="Joomboxr - Joomla Extracts"  /></a>
 
-            <div class="postbox">
-                <h3>Codeboxr on facebook</h3>
-                <div class="inside">
-                    <iframe scrolling="no" frameborder="0" allowtransparency="true" style="border:none; overflow:hidden; width:260px; height:258px;" src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fcodeboxr&amp;width=260&amp;height=258&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=false&amp;appId=558248797526834"></iframe>
-                </div>
-            </div>
-
+		        </div>
+	        </div>
+	        <div class="postbox">
+		        <h3><?php _e('WPBoxr on facebook','wpfixedverticalfeedbackbutton') ?></h3>
+		        <div class="inside">
+			        <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fwpboxr&amp;width=260&amp;height=258&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=false&amp;appId=558248797526834" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:260px; height:258px;" allowTransparency="true"></iframe>
+		        </div>
+	        </div>
         </div>
         <?php
         echo '</div>';
@@ -732,33 +746,7 @@ class CbCurrencyConverter{
 
     }
 
-    /**
-     * cbcurrencyconverter_ajax_cur_convert
-     */
-    /*
-    public static function cbcurrencyconverter_ajax_cur_convert(){
 
-        $cbcurrencyconverter_cur_data = $_POST['cb_cur_data'];
-
-        if($cbcurrencyconverter_cur_data['cbcurconvert_error'] == ''){
-
-            if($cbcurrencyconverter_cur_data['type'] == 'up'){
-
-                $cbcurrencyconverter_result_cur = self::codeboxrconvertcurrency($cbcurrencyconverter_cur_data['cbcurconvert_amount'],$cbcurrencyconverter_cur_data['cbcurconvert_to'],$cbcurrencyconverter_cur_data['cbcurconvert_from']);
-            }
-            else{
-
-                $cbcurrencyconverter_result_cur = self::codeboxrconvertcurrency($cbcurrencyconverter_cur_data['cbcurconvert_amount'],$cbcurrencyconverter_cur_data['cbcurconvert_from'],$cbcurrencyconverter_cur_data['cbcurconvert_to']);
-            }
-        }
-        else{
-
-            $cbcurrencyconverter_result_cur = $cbcurrencyconverter_cur_data['cbcurconvert_error'];
-        }
-        echo(json_encode($cbcurrencyconverter_result_cur));
-        die();
-    }
-    */
 
     /**
      * @return string
@@ -804,56 +792,7 @@ class CbCurrencyConverter{
 
 
         // var_dump(is_plugin_active('cbcurrencyconverteraddon/cbcurrencyconverteraddon.php'));
-        /*
-        if( $cbcur_options['use_global'] != 'on' && file_exists( CODEBOXR_CURRENCYCONVERTER_INCLUDE ) && is_plugin_active('cbcurrencyconverteraddon/cbcurrencyconverteraddon.php')){
 
-            $layout_options        = array('cbcurrencyconverter_list' , 'cbcurrencyconverter_cal' , 'cbcurrencyconverter_calwithlistbottom' , 'cbcurrencyconverter_calwithlisttop');
-            $filter_layout         = explode(",", $cbcur_options['layout']);
-            $check_currencylayout  = array_intersect($layout_options , $filter_layout);
-
-            if(empty($check_currencylayout)){
-                if(count($filter_layout) == 1){
-                    if( $filter_layout[0] == 'calc'){
-                        $widget_style = 'cbcurrencyconverter_cal';
-                    }
-                    else{
-                        $widget_style = 'cbcurrencyconverter_list';
-                    }
-                }
-                else{
-                    if( $filter_layout[0] == 'calc'){
-                        $widget_style = 'cbcurrencyconverter_calwithlistbottom';
-                    }
-                    else{
-                        $widget_style = 'cbcurrencyconverter_calwithlisttop';
-                    }
-                }
-                //  $widget_style = (count($filter_layout) == 1 )?( $filter_layout[0] == 'calc' )? 'cbcurrencyconverter_cal' : 'cbcurrencyconverter_list' : ($filter_layout[0] == 'calc') ? 'cbcurrencyconverter_calwithlistbottom' : 'cbcurrencyconverter_calwithlisttop';
-            }
-
-            $instance['cbxccuseglobal']          = $cbcur_options['use_global'];
-            //$instance['cbxccbackgroundcolor']    = $cbcur_options['background_color'];
-            //$instance['cbxcctextcolor']          = $cbcur_options['text_color'];
-            //$instance['cbxccbordercolor']        = $cbcur_options['border'];
-            $instance['cbxccdefaultlayout']      = $widget_style;
-            $instance['cbxcalfromcurrency']      = $cbcur_options['calc_from_currency'];
-            $instance['cbxcaltocurrency']        = $cbcur_options['calc_to_currency'];
-            $instance['cbxcaldefaultamount']     = $cbcur_options['calc_default_amount'];
-            $instance['cbxcaltitle']             = $cbcur_options['calc_title'];
-            $instance['cbxlistfromcurrency']     = $cbcur_options['list_from_currency'];
-
-            $instance['cbxlisttitle']            = $cbcur_options['list_title'];
-            $instance['cbxlistdefaultamount']    = $cbcur_options['list_default_amount'];
-            if(!is_array($cbcur_options['list_to_currency'])){
-                $instance['cbxlisttocurrency']       = explode(",", $cbcur_options['list_to_currency']);
-            }
-            else{
-                $instance['cbxlisttocurrency']       = $cbcur_options['list_to_currency'];
-            }
-
-        }
-
-        */
 
 
 

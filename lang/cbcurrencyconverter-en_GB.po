@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Codeboxr Currency Converter v1.0.10\n"
+"Project-Id-Version: CBX Currency Converter v1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-01-04 18:57:48+0000\n"
+"PO-Revision-Date: 2015-06-25 13:18:43+0000\n"
 "Last-Translator: Sabuj Kundu <sabuj@codeboxr.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -160,18 +160,13 @@ msgstr ""
 msgid "List of Currency"
 msgstr ""
 
-#: cbcurrencyconverter.php:603
-#@ cbcurrencyconverter
-msgid "Codeboxr Currency Converter"
-msgstr ""
-
-#: cbcurrencyconverter.php:779
+#: cbcurrencyconverter.php:795
 #: widgets/views/cbcurrencyconverter_widget_list.php:26
 #@ cbcurrencyconverter
 msgid "List of Converted Currency"
 msgstr ""
 
-#: cbcurrencyconverter.php:788
+#: cbcurrencyconverter.php:804
 #: widgets/views/cbcurrencyconverter_widget_cal.php:33
 #: widgets/views/cbcurrencyconverter_widget_cal.php:133
 #@ cbcurrencyconverter
@@ -225,6 +220,41 @@ msgstr ""
 
 #: cbcurrencyconverter.php:526
 #@ cbcurrencyconverter
-msgid "Check this box if you would like <strong>Codeboxr Currency Converter</strong> to completely remove all of its data when the plugin is deleted."
+msgid "Check this box if you would like <strong>CBX Currency Converter</strong> to completely remove all of its data when the plugin is deleted."
+msgstr ""
+
+#: cbcurrencyconverter.php:608
+#@ wpfixedverticalfeedbackbutton
+msgid "Grab the Pro Version"
+msgstr ""
+
+#: cbcurrencyconverter.php:612
+#@ cbcurrencyconverter
+msgid "CBX Currency Converter"
+msgstr ""
+
+#: cbcurrencyconverter.php:655
+#@ wpfixedverticalfeedbackbutton
+msgid "WPBoxr Updates"
+msgstr ""
+
+#: cbcurrencyconverter.php:687
+#@ wpfixedverticalfeedbackbutton
+msgid "Codeboxr Networks"
+msgstr ""
+
+#: cbcurrencyconverter.php:688
+#@ wpfixedverticalfeedbackbutton
+msgid "Html, Wordpress & Joomla Themes"
+msgstr ""
+
+#: cbcurrencyconverter.php:691
+#@ wpfixedverticalfeedbackbutton
+msgid "Wordpress Plugins"
+msgstr ""
+
+#: cbcurrencyconverter.php:700
+#@ wpfixedverticalfeedbackbutton
+msgid "WPBoxr on facebook"
 msgstr ""
 

@@ -1,14 +1,14 @@
-=== Codeboxr Currency Converter ===
+=== CBX Currency Converter ===
 Contributors: manchumahara, codeboxr
 Donate link: http://codeboxr.com
 Tags: widget,shortcode, currency, currency converter, exchange rate, exchange rate display
 Requires at least: 3.0
-Tested up to: 4.0
-Stable tag: 1.0.10
+Tested up to: 4.2.2
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Codeboxr Currency Converter for wordpress
+CBX  Currency Converter for wordpress
 
 == Description ==
 
@@ -30,6 +30,10 @@ Pro Version:
 * Can give every widgets and shortcodes different look
 * Widgets can take its own setting or global settings
 * Shortcode Params
+
+[codeboxrcurrencyconverter]
+
+For extra params use the following:
 
 use_global           - Set  'on' if you want to use global settings,
 
@@ -99,7 +103,8 @@ Yes and it will work in both place at a time nicely, just try it.
 
 
 == Changelog ==
-
+= 1.1.0 =
+* Minor bug fix release
 = 1.0.10 =
 * First Public Release
 
