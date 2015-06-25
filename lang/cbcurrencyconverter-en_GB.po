@@ -1,0 +1,260 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CBX Currency Converter v1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-06-25 13:18:43+0000\n"
+"Last-Translator: Sabuj Kundu <sabuj@codeboxr.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED KINGDOM\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: cbcurrencyconverter.php:218
+#: cbcurrencyconverter.php:219
+#: widgets/cbcurrencyconverterwidget.php:40
+#: widgets/cbcurrencyconverterwidget.php:43
+#: widgets/cbcurrencyconverterwidget.php:154
+#@ cbcurrencyconverter
+msgid "Currency Converter"
+msgstr ""
+
+#: cbcurrencyconverter.php:238
+#@ cbcurrencyconverter
+msgid "Currency Converter Settings"
+msgstr ""
+
+#: cbcurrencyconverter.php:242
+#: cbcurrencyconverter.php:446
+#@ cbcurrencyconverter
+msgid "Calculator Settings"
+msgstr ""
+
+#: cbcurrencyconverter.php:247
+#: cbcurrencyconverter.php:451
+#@ cbcurrencyconverter
+msgid "List Settings"
+msgstr ""
+
+#: cbcurrencyconverter.php:300
+#: cbcurrencyconverter.php:476
+#@ cbcurrencyconverter
+msgid "Calculator"
+msgstr ""
+
+#: cbcurrencyconverter.php:311
+#: cbcurrencyconverter.php:477
+#@ cbcurrencyconverter
+msgid "List"
+msgstr ""
+
+#: cbcurrencyconverter.php:370
+#@ cbcurrencyconverter
+msgid "Settings"
+msgstr ""
+
+#: cbcurrencyconverter.php:442
+#@ cbcurrencyconverter
+msgid "General Settings"
+msgstr ""
+
+#: cbcurrencyconverter.php:471
+#@ cbcurrencyconverter
+msgid "Layout"
+msgstr ""
+
+#: cbcurrencyconverter.php:478
+#@ cbcurrencyconverter
+msgid "Calculator with List at bottom"
+msgstr ""
+
+#: cbcurrencyconverter.php:479
+#@ cbcurrencyconverter
+msgid "Calculator with List at top"
+msgstr ""
+
+#: cbcurrencyconverter.php:489
+#@ cbcurrencyconverter
+msgid "From"
+msgstr ""
+
+#: cbcurrencyconverter.php:490
+#@ cbcurrencyconverter
+msgid "What Will Be Your Default  Currency To Convert From"
+msgstr ""
+
+#: cbcurrencyconverter.php:497
+#@ cbcurrencyconverter
+msgid "To "
+msgstr ""
+
+#: cbcurrencyconverter.php:498
+#@ cbcurrencyconverter
+msgid "What Will Be Your Default To  Currency"
+msgstr ""
+
+#: cbcurrencyconverter.php:505
+#: cbcurrencyconverter.php:553
+#@ cbcurrencyconverter
+msgid "Default Amount"
+msgstr ""
+
+#: cbcurrencyconverter.php:506
+#@ cbcurrencyconverter
+msgid "What Will Be Your Default Amount of Currency For Calculating"
+msgstr ""
+
+#: cbcurrencyconverter.php:512
+#: cbcurrencyconverter.php:560
+#@ cbcurrencyconverter
+msgid "Title"
+msgstr ""
+
+#: cbcurrencyconverter.php:513
+#@ cbcurrencyconverter
+msgid "Title to  show in calculator "
+msgstr ""
+
+#: cbcurrencyconverter.php:537
+#@ cbcurrencyconverter
+msgid "Currency  To Convert From"
+msgstr ""
+
+#: cbcurrencyconverter.php:538
+#@ cbcurrencyconverter
+msgid "What Will Be Your Default Currency For Listing"
+msgstr ""
+
+#: cbcurrencyconverter.php:545
+#@ cbcurrencyconverter
+msgid "To Currency"
+msgstr ""
+
+#: cbcurrencyconverter.php:546
+#@ cbcurrencyconverter
+msgid "Currency list to convert and show in listing "
+msgstr ""
+
+#: cbcurrencyconverter.php:554
+#@ cbcurrencyconverter
+msgid "Default amount for listing"
+msgstr ""
+
+#: cbcurrencyconverter.php:561
+#@ cbcurrencyconverter
+msgid "Title to  show in listing "
+msgstr ""
+
+#: cbcurrencyconverter.php:563
+#@ cbcurrencyconverter
+msgid "List of Currency"
+msgstr ""
+
+#: cbcurrencyconverter.php:795
+#: widgets/views/cbcurrencyconverter_widget_list.php:26
+#@ cbcurrencyconverter
+msgid "List of Converted Currency"
+msgstr ""
+
+#: cbcurrencyconverter.php:804
+#: widgets/views/cbcurrencyconverter_widget_cal.php:33
+#: widgets/views/cbcurrencyconverter_widget_cal.php:133
+#@ cbcurrencyconverter
+msgid "Convert Currency"
+msgstr ""
+
+#: widgets/cbcurrencyconverterwidget.php:163
+#@ cbcurrencyconverter
+msgid "Title:"
+msgstr ""
+
+#: widgets/views/cbcurrencyconverter_widget_cal.php:60
+#@ cbcurrencyconverter
+msgid "Amount"
+msgstr ""
+
+#: widgets/views/cbcurrencyconverter_widget_cal.php:68
+#: widgets/views/cbcurrencyconverter_widget_cal.php:85
+#: widgets/views/cbcurrencyconverter_widget_cal.php:166
+#: widgets/views/cbcurrencyconverter_widget_cal.php:181
+#@ cbcurrencyconverter
+msgid "Select a currency"
+msgstr ""
+
+#: widgets/views/cbcurrencyconverter_widget_cal.php:192
+#@ cbcurrencyconverter
+msgid "Convert"
+msgstr ""
+
+#: widgets/views/cbcurrencyconverter_widget_list.php:50
+#@ cbcurrencyconverter
+msgid "equals"
+msgstr ""
+
+#: cbcurrencyconverter.php:251
+#: cbcurrencyconverter.php:456
+#@ cbcurrencyconverter
+msgid "Tools"
+msgstr ""
+
+#: cbcurrencyconverter.php:255
+#: cbcurrencyconverter.php:460
+#@ cbcurrencyconverter
+msgid "Integration "
+msgstr ""
+
+#: cbcurrencyconverter.php:525
+#@ cbcurrencyconverter
+msgid "Remove Data on Uninstall?"
+msgstr ""
+
+#: cbcurrencyconverter.php:526
+#@ cbcurrencyconverter
+msgid "Check this box if you would like <strong>CBX Currency Converter</strong> to completely remove all of its data when the plugin is deleted."
+msgstr ""
+
+#: cbcurrencyconverter.php:608
+#@ wpfixedverticalfeedbackbutton
+msgid "Grab the Pro Version"
+msgstr ""
+
+#: cbcurrencyconverter.php:612
+#@ cbcurrencyconverter
+msgid "CBX Currency Converter"
+msgstr ""
+
+#: cbcurrencyconverter.php:655
+#@ wpfixedverticalfeedbackbutton
+msgid "WPBoxr Updates"
+msgstr ""
+
+#: cbcurrencyconverter.php:687
+#@ wpfixedverticalfeedbackbutton
+msgid "Codeboxr Networks"
+msgstr ""
+
+#: cbcurrencyconverter.php:688
+#@ wpfixedverticalfeedbackbutton
+msgid "Html, Wordpress & Joomla Themes"
+msgstr ""
+
+#: cbcurrencyconverter.php:691
+#@ wpfixedverticalfeedbackbutton
+msgid "Wordpress Plugins"
+msgstr ""
+
+#: cbcurrencyconverter.php:700
+#@ wpfixedverticalfeedbackbutton
+msgid "WPBoxr on facebook"
+msgstr ""
+

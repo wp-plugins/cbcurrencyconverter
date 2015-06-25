@@ -1,0 +1,134 @@
+.cbcurrencyconverter_cal_wrapper{
+
+
+}
+
+/* This stylesheet is used to style the public view of the widget. */
+select.cbcurrencyconverter_cal_from {
+    /*
+     font-size:12px;
+     margin-bottom:4px;
+     margin-right:4px;
+     margin-top:4px;
+     width:160px;
+    */
+ }
+select.cbcurrencyconverter_cal_to{
+    /*
+    font-size:12px;
+    margin-bottom:4px;
+    margin-right:4px;
+    margin-top:4px;
+    width:160px;
+    */
+}
+input.cbcurrencyconverter_cal_amount{
+    /*
+    font-size:12px;
+    margin-bottom:4px;
+    margin-right:4px;
+    margin-top:4px;
+    width:145px;
+    */
+}
+.cbcurrencyconverter_label{
+    /*
+    display: inline-block;
+    width:75px!important;
+    padding-right: 10px;
+    */
+}
+.cbcurrencyconverter_calculate{
+    /*
+    display: inline-block;
+    width:45px!important;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 13px!important;
+    */
+
+
+}
+.cbcurrencyconverter_calculate[data-id='up']{
+
+
+}
+.cbcurrencyconverter_calculate[data-id='down']{
+    margin-left: 10px!important;
+
+}
+.cbconverter_result_wrapper_shortcode{
+   margin-left: 75px;
+}
+.cbcurrencyconverter_heading{
+    /*
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 10px;
+    */
+}
+.cbcurrencyconverter_list_to li{
+  margin-left: 0!important;
+    padding-top: 3px;
+}
+.cbcurrencyconverter_list_wrapper{
+    padding: 8px;
+    margin:8px 0px ;
+    border-radius: 4px;
+}
+
+
+.cbcurrencyconverter_result{
+    padding: 8px;
+    margin:8px 0px ;
+    border-radius: 4px;
+    text-align: left;
+
+}
+.cbcur_list_custom_text{
+    margin-left: 5px;
+}
+.cbcur_list_to_country{
+    margin-left: 5px;
+}
+.cbcur_list_to_cur{
+    display: inline-block;
+    width:70px!important;
+
+}
+.cbcurrencyconverter_active{
+
+
+    background-position: 32px 8px!important;
+    background-repeat: no-repeat!important;
+    background-size: 12px 12px!important;
+    background-image: url(busy.gif)  !important;
+}
+.cbcurrencyconverter_list_wrapper  .cbcurrencyconverter_heading{
+    margin-left: 5px;
+}
+.cbconverter_result_wrapper_shortcode {
+    text-decoration: none; text-align: left;
+    margin: 10px 0;
+}
+.cbconverter_result_wrapper_widget{
+    clear: both;
+    text-decoration: none;
+    text-align: left;
+    margin: 20px 0 10px 0;
+}
+
+.cbcurrencyconverter_form_fields{
+    width: 100%; clear: both;
+    margin: 5px 0;
+    float: left;
+}
+
+.cbcurrencyconverter_form_fields span.cbcurrencyconverter_label{
+    clear: both; float: left; width: 100%;
+}
+
+.cbcurrencyconverter_form_fields input, .cbcurrencyconverter_form_fields select{
+    max-width: 300px;
+}
